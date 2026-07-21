@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Pds.Contracts.Approver.Func": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 34690,
+      "useSSL": false
+    }
+  }
+}
