@@ -1,0 +1,40 @@
+{
+  "IsEncrypted": false,
+  "version": "2.0",
+  "Values": {
+    "AuditApiConfiguration": {
+      "ApiBaseAddress": "",
+      "AppUri": "",
+      "Authority": "",
+      "ClientId": "",
+      "ClientSecret": "",
+      "TenantId": ""
+    },
+    "AzureWebJobsStorage": "",
+    "Environment": "",
+    "FcsApiClientConfiguration": {
+      "ApiBaseAddress": "",
+      "AppUri": "",
+      "Authority": "",
+      "ClientId": "",
+      "ClientSecret": "",
+      "TenantId": "",
+      "ShouldSkipAuthentication": "false",
+      "ApiContractApproverEndpoint": ""
+    },
+    "FUNCTIONS_EXTENSION_VERSION": "~3",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "HttpPolicyOptions": {
+      "CircuitBreakerDurationOfBreak": "0.00:00:15",
+      "CircuitBreakerToleranceCount": "5",
+      "HttpRetryBackoffPower": "2",
+      "HttpRetryCount": "3"
+    },
+    "Pds.Contracts.Approval.Subscription": "",
+    "Pds.Contracts.Notifications.Topic": "",
+    "PdsApplicationInsights": {
+      "Environment": "",
+      "InstrumentationKey": ""
+    }
+  }
+}
