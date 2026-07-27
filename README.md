@@ -22,42 +22,35 @@ For running the application locally, `local.settings.json` file need to be creat
 ```json
 {
   "IsEncrypted": false,
-  "version": "2.0",
   "Values": {
-    "AuditApiConfiguration": {
-      "ApiBaseAddress": "",
-      "AppUri": "",
-      "Authority": "",
-      "ClientId": "",
-      "ClientSecret": "",
-      "TenantId": ""
-    },
-    "AzureWebJobsStorage": "",
-    "Environment": "",
-    "FcsApiClientConfiguration": {
-      "ApiBaseAddress": "",
-      "AppUri": "",
-      "Authority": "",
-      "ClientId": "",
-      "ClientSecret": "",
-      "TenantId": "",
-      "ShouldSkipAuthentication": "false",
-      "ApiContractApproverEndpoint": ""
-    },
+    "AuditApiConfiguration:ApiBaseAddress": "",
+    "AuditApiConfiguration:AppUri": "",
+    "AuditApiConfiguration:Authority": "",
+    "AuditApiConfiguration:ClientId": "",
+    "AuditApiConfiguration:ClientSecret": "",
+    "AuditApiConfiguration:TenantId": "",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "Environment": "local",
+    "FcsApiClientConfiguration:ApiBaseAddress": "",
+    "FcsApiClientConfiguration:AppUri": "",
+    "FcsApiClientConfiguration:Authority": "",
+    "FcsApiClientConfiguration:ClientId": "",
+    "FcsApiClientConfiguration:ClientSecret": "",
+    "FcsApiClientConfiguration:TenantId": "",
+    "FcsApiClientConfiguration:ShouldSkipAuthentication": "false",
+    "FcsApiClientConfiguration:ApiContractApproverEndpoint": "",
     "FUNCTIONS_EXTENSION_VERSION": "~3",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "HttpPolicyOptions": {
-      "CircuitBreakerDurationOfBreak": "0.00:00:15",
-      "CircuitBreakerToleranceCount": "5",
-      "HttpRetryBackoffPower": "2",
-      "HttpRetryCount": "3"
-    },
+    "HttpPolicyOptions:CircuitBreakerDurationOfBreak": "0.00:00:15",
+    "HttpPolicyOptions:CircuitBreakerToleranceCount": "5",
+    "HttpPolicyOptions:HttpRetryBackoffPower": "2",
+    "HttpPolicyOptions:HttpRetryCount": "3",
     "Pds.Contracts.Approval.Subscription": "",
     "Pds.Contracts.Notifications.Topic": "",
-    "PdsApplicationInsights": {
-      "Environment": "",
-      "InstrumentationKey": ""
-    }
+    "PdsApplicationInsights:Environment": "local",
+    "PdsApplicationInsights:InstrumentationKey": "",
+    "sb-connection-string": ""
   }
 }
 ```
@@ -81,8 +74,11 @@ For running the application locally, `local.settings.json` file need to be creat
 - **`AuditApiConfiguration:TenantId`**  
   The unique identifier that specifies the exact organization or cloud instance within the Identity Provider where the Audit API client is registered.
 
+- **`AzureWebJobsDashboard`**  
+  The core application setting used by the Azure Functions and Azure WebJobs runtime to establish a connection to an Azure Jobs dashboard.
+
 - **`AzureWebJobsStorage`**  
-  The standard environment variable used by the Azure Functions host to manage essential runtime operations like logging, triggers, and locks.
+  The core application setting used by the Azure Functions and Azure WebJobs runtime to establish a connection to an Azure Storage account.
 
 - **`Environment`**  
   The environment which the app is running on.
@@ -140,3 +136,17 @@ For running the application locally, `local.settings.json` file need to be creat
 
 - **`PdsApplicationInsights:InstrumentationKey`**  
   The key for Application Insights resource for logging purposes.
+
+- **`sb-connection-string`**  
+  The connection string for the Azure Service Bus resource.
+
+## Build and Test
+
+To build and test locally, you can either use Visual Studio, Visual Studio Code or simply use dotnet CLI `dotnet build` and `dotnet test` more information in dotnet CLI can be found at <https://docs.microsoft.com/en-us/dotnet/core/tools/>.
+
+## Contribute
+
+To contribute,
+
+- If you are part of the team then create a branch for changes and then submit your changes for review by creating a pull request.
+- If you are external to the organisation then fork this repository and make necessary changes and then submit your changes for review by creating a pull request.

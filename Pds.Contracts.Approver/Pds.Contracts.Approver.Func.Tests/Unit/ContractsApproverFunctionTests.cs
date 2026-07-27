@@ -1,15 +1,9 @@
 ﻿using FluentAssertions;
-using Microsoft.Azure.ServiceBus;
-using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Newtonsoft.Json;
 using Pds.Contracts.Approver.Services.Interfaces;
 using Pds.Contracts.Approver.Services.Models;
 using System;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Pds.Contracts.Approver.Func.Tests.Unit
